@@ -1,0 +1,11 @@
+.classpath
+.project
+.DS_Store
+.settings/
+target/
+test-output/
+bin/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/libraries
+*.iml
