@@ -15,10 +15,12 @@ public class Ratpack00 {
     public static void main(String[] args) throws Exception {
 
         RatpackServer.start(s -> s
-                        .serverConfig(c -> c.baseDir(BaseDir.find()))
+                        .serverConfig(config -> config.baseDir(BaseDir.find()))
+                        .registryOf(registry -> registry.add(new HelloHandler()))
                         .handlers(chain -> chain
                                         .path("foo", ctx -> ctx.render("from the foo handler")) // Map to /foo
                                         .path("bar", ctx -> ctx.render("from the bar handler")) // Map to /bar
+                                        .path("hello", ctx -> ctx.get(HelloHandler.class).handle(ctx))
                                         .all(ctx -> ctx.render("root handler!"))
                         )
         );
