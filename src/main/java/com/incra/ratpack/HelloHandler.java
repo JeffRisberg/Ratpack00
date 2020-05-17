@@ -9,11 +9,11 @@ import ratpack.handling.Handler;
  */
 public class HelloHandler implements Handler {
 
-    public HelloHandler() {
-    }
+  public HelloHandler() {
+  }
 
-    @Override
-    public void handle(Context context) {
-        context.render("Hello, World!");
-    }
+  @Override
+  public void handle(Context context) {
+    context.render("Hello, World!");
+  }
 }

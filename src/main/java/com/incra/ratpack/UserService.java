@@ -8,5 +8,5 @@ import java.util.List;
  */
 public interface UserService {
 
-    public List<String> getUsers();
+  public List<String> getUsers();
 }
