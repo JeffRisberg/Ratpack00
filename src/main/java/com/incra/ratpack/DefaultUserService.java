@@ -8,6 +8,7 @@ import java.util.List;
  * @since 12/20/16
  */
 public class DefaultUserService implements UserService {
+
   public List<String> getUsers() {
     String[] users = {"Bob", "Sally"};
 
